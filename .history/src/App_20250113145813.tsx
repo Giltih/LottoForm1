@@ -6,7 +6,7 @@ import StrongNumberSelector from './components/StrongNumberSelector';
 import LottoTables from './components/LottoTables';
 import PriceSummary from './components/PriceSummary';
 import './App.css';
- 
+ n
 const App: React.FC = () => {
   const [tableCount, setTableCount] = useState(2);
   const [draws, setDraws] = useState(1);
