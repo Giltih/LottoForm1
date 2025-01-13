@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface StrongNumberSelectorProps {
-  onStrongNumberSelect: (number: number) => void;
+  onStrongNumberSelect: (number: ) => void;
   selectedStrongNumber: number ;
 }
 

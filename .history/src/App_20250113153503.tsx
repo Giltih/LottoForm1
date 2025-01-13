@@ -36,7 +36,7 @@ const App: React.FC = () => {
         <div className="left-section">
           <LotteryAmountSelector selectedDraws={draws} onChange={setDraws} />
           <ExtraOption isSelected={isExtraSelected} onChange={setIsExtraSelected} />
-          <StrongNumberSelector selectedStrongNumber={strongNumber} onStrongNumberSelect={setStrongNumber} />
+          <StrongNumberSelector selectedStrongNumber={strongNumber} StrongNumberSelect={setStrongNumber} />
           <PriceSummary tables={tableCount} draws={draws} isExtraSelected={isExtraSelected} />
         </div>
         <div className="right-section">

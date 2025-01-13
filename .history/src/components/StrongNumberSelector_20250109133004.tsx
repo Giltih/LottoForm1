@@ -2,7 +2,7 @@ import React from 'react';
 
 interface StrongNumberSelectorProps {
   onStrongNumberSelect: (number: number) => void;
-  selectedStrongNumber: number ;
+  selectedStrongNumber: number | null;
 }
 
 const StrongNumberSelector: React.FC<StrongNumberSelectorProps> = ({ onStrongNumberSelect, selectedStrongNumber }) => {

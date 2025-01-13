@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const [tableCount, setTableCount] = useState(2);
   const [draws, setDraws] = useState(1);
   const [isExtraSelected, setIsExtraSelected] = useState(false);
-  const [strongNumber, setStrongNumber] = useState<number>(0);
+  const [strongNumber, setStrongNumber] = useState<number | null>(null);
   const [selectedNumbers, setSelectedNumbers] = useState<number[][]>(
     Array(14).fill([]) 
   );
@@ -36,7 +36,7 @@ const App: React.FC = () => {
         <div className="left-section">
           <LotteryAmountSelector selectedDraws={draws} onChange={setDraws} />
           <ExtraOption isSelected={isExtraSelected} onChange={setIsExtraSelected} />
-          <StrongNumberSelector selectedStrongNumber={strongNumber} onStrongNumberSelect={setStrongNumber} />
+          <StrongNumberSelector selectedStrongNumber ={strongNumber} onSelect={setStrongNumber} />
           <PriceSummary tables={tableCount} draws={draws} isExtraSelected={isExtraSelected} />
         </div>
         <div className="right-section">
