@@ -1,5 +1,5 @@
 {
-  "name": "LottoForm",
+  "name": "LottoForm1",
   "homepage": "https://giltih.github.io/LottoForm1/",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview --port 8080",
+    "preview": "vite preview --port",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

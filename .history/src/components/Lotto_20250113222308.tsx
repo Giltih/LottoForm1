@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import LottoTables from "./LottoTables";
 import LottoSummary from "./LottoSummary";
 
 const Lotto: React.FC = () => {

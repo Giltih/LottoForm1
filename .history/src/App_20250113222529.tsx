@@ -8,7 +8,6 @@ import PriceSummary from './components/PriceSummary';
 import './App.css';
  
 const App: React.FC = () => {
-  const tableCount = 2;
   // const [tableCount, setTableCount] = useState(2);
   const [draws, setDraws] = useState(1);
   const [isExtraSelected, setIsExtraSelected] = useState(false);

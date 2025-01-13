@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import LottoTables from "./LottoTables";
 import LottoSummary from "./LottoSummary";
 
 const Lotto: React.FC = () => {
@@ -37,7 +38,7 @@ const Lotto: React.FC = () => {
       </div>
 
       <div>
-        <h3>Number of Draws:</h3>
+        <h3>ghghghg</h3>
         {[1, 2, 4, 8].map((draw) => (
           <button
             key={draw}
@@ -61,7 +62,7 @@ const Lotto: React.FC = () => {
         <button onClick={resetForm}>Reset Form</button>
       </div>
 
-      {/* <LottoTables totalTables={totalTables} /> */}
+      <LottoTables totalTables={totalTables} />
       <LottoSummary totalTables={totalTables} selectedDraws={selectedDraws} />
     </div>
   );
