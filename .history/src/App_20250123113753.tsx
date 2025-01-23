@@ -3,7 +3,7 @@ import Header from './components/Header';
 import LotteryAmountSelector from './components/LotteryAmountSelector';
 import ExtraOption from './components/ExtraOption';
 import StrongNumberSelector from './components/StrongNumberSelector';
-import LottoForm from './components/LottoForm';
+import LottoForm from
 import PriceSummary from './components/PriceSummary';
 import './App.css';
  
@@ -41,7 +41,7 @@ const App: React.FC = () => {
           <PriceSummary tables={tableCount} draws={draws} isExtraSelected={isExtraSelected} />
         </div>
         <div className="right-section">
-          <LottoForm
+          <LottoTables
             tableCount={tableCount}
             selectedNumbers={selectedNumbers}
             onNumberSelect={handleNumberSelect}

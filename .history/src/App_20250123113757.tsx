@@ -41,7 +41,7 @@ const App: React.FC = () => {
           <PriceSummary tables={tableCount} draws={draws} isExtraSelected={isExtraSelected} />
         </div>
         <div className="right-section">
-          <LottoForm
+          <LottoTables
             tableCount={tableCount}
             selectedNumbers={selectedNumbers}
             onNumberSelect={handleNumberSelect}
