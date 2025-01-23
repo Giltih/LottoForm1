@@ -40,20 +40,4 @@ button:hover {
   background-color: #b3e5fc;
 }
 
-.numbersGrid {
-  display: 'grid';
-  grid-template-columns: 'repeat(9, 1fr)'; 
-  gap: '5px' ;
-}
-
-.numbersGrid button { 
-  padding: 5px;
-  margin: 5px;
-  background-color: #817a7a;
-  min-width:30px;
-
-}
-
-.numbersGrid button.selected {
-  background-color: #487184;
-}
+.num

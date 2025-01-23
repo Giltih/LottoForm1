@@ -48,12 +48,9 @@ button:hover {
 
 .numbersGrid button { 
   padding: 5px;
-  margin: 5px;
   background-color: #817a7a;
-  min-width:30px;
-
 }
 
 .numbersGrid button.selected {
-  background-color: #487184;
+
 }

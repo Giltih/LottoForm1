@@ -19,9 +19,7 @@ const LottoTables: React.FC<Props> = ({ tableCount, selectedNumbers, onNumberSel
             {numbers.map((number) => (
               <button
                 key={number}
-                className = {selectedNumbers[tableIndex]?.includes(number)
-                ? 'selected'
-                : ''}
+                className='l'
                 onClick={() => onNumberSelect(tableIndex, number)}
               >
                 {number}

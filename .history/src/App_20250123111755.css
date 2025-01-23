@@ -50,7 +50,7 @@ button:hover {
   padding: 5px;
   margin: 5px;
   background-color: #817a7a;
-  min-width:30px;
+  min: 30px;
 
 }
 
