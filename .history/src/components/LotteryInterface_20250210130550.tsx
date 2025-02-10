@@ -7,7 +7,7 @@ interface TableData {
   regular: (number | null)[];
   strong: number | null;
 }
-//new interface//
+////
 interface ColumnProps {
   selectedTable?: number;
   selectedRaffles?: number;
