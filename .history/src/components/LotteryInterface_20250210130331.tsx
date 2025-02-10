@@ -7,7 +7,7 @@ interface TableData {
   regular: (number | null)[];
   strong: number | null;
 }
-//vibe//
+//
 interface ColumnProps {
   selectedTable?: number;
   selectedRaffles?: number;
