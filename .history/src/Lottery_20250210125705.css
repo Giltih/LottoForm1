@@ -1,0 +1,313 @@
+.lottery-interface {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Left Column Styles */
+  .left-column {
+    padding: 1rem;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ebf5ff, #e6f0f9);
+  }
+  
+  .left-column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .raffle-selector,
+  .extra-option {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .raffle-header,
+  .extra-option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .help-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+  }
+  
+  .raffle-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .raffle-button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    color: white;
+  }
+  
+  .raffle-button.selected {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+  }
+  
+  .raffle-button:hover:not(.selected) {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+  }
+  
+  .summary-section {
+    margin-top: auto;
+  }
+  
+  .price-summary {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .summary-row,
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .total-row {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #1d4ed8;
+  }
+  
+  .submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    background: linear-gradient(to right, #22c55e, #16a34a);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(to right, #16a34a, #15803d);
+  }
+  
+  /* Middle Column Styles */
+  .middle-column {
+    padding: 1rem;
+    height: 100%;
+    background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  }
+  
+  .table-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .table-row {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e5e7eb;
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .table-row:hover:not(.selected) {
+    border-color: #93c5fd;
+  }
+  
+  .table-row.selected {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-row-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .table-number {
+    width: 1.5rem;
+    font-weight: 500;
+    color: #2563eb;
+  }
+  
+  .number-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .regular-number,
+  .strong-number {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+  
+  .regular-number {
+    background: linear-gradient(to bottom right, #ebf5ff, #dbeafe);
+    color: #1d4ed8;
+  }
+  
+  .strong-number {
+    background: linear-gradient(to bottom right, #fef3c7, #fde68a);
+    color: #b45309;
+  }
+  
+  .delete-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .delete-icon:hover {
+    color: #ef4444;
+  }
+  
+  /* Right Column Styles */
+  .right-column {
+    padding: 1rem;
+    height: 100%;
+    background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  }
+  
+  .number-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-weight: 500;
+  }
+  
+  .section-title.regular {
+    color: #1d4ed8;
+  }
+  
+  .section-title.strong {
+    color: #b45309;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #3b82f6;
+  }
+  
+  .number-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+  
+  .number-button.regular {
+    background: linear-gradient(to bottom right, #ebf5ff, #dbeafe);
+    color: #1d4ed8;
+  }
+  
+  .number-button.regular:hover:not(:disabled) {
+    background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+  }
+  
+  .number-button.strong {
+    background: linear-gradient(to bottom right, #fef3c7, #fde68a);
+    color: #b45309;
+  }
+  
+  .number-button.strong:hover:not(:disabled) {
+    background: linear-gradient(to bottom right, #fde68a, #fcd34d);
+  }
+  
+  .number-button.selected {
+    background: #3b82f6;
+    color: white;
+    cursor: not-allowed;
+  }
+  
+  .number-button.strong.selected {
+    background: #f59e0b;
+    color: white;
+  }
+  
+  .number-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  .strong-number-section {
+    margin-top: 2rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .lottery-interface {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .number-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  
+    .raffle-buttons {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .number-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .table-row-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .delete-icon {
+      align-self: flex-end;
+    }
+  }

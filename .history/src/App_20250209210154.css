@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: flex;
+  m
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b3e5fc;
+}
+
+.numbersGrid {
+  display: 'grid';
+  grid-template-columns: 'repeat(9, 1fr)'; 
+  gap: '5px' ;
+}
+
+.numbersGrid button { 
+  padding: 5px;
+  margin: 5px;
+  background-color: #817a7a;
+  min-width:30px;
+
+}
+
+.numbersGrid button.selected {
+  background-color: #487184;
+}
