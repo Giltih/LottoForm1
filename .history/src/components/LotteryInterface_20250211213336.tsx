@@ -80,17 +80,17 @@ const LotteryInterface: React.FC = () => {
       }
     }
     else {
-      if (isStrong) {
-        newTables[tableIndex].strong = number;
-      } else {
-        const regularNumbers = newTables[tableIndex].regular;
-        const firstEmpty = regularNumbers.indexOf(null);
-        if (firstEmpty !== -1) {
-          regularNumbers[firstEmpty] = number;
-        }
+      
+    }
+    if (isStrong) {
+      newTables[tableIndex].strong = number;
+    } else {
+      const regularNumbers = newTables[tableIndex].regular;
+      const firstEmpty = regularNumbers.indexOf(null);
+      if (firstEmpty !== -1) {
+        regularNumbers[firstEmpty] = number;
       }
     }
-   
     setTables([...newTables]);
   };
 

@@ -257,7 +257,7 @@
     color: #b45309;
   }
   
-  .number-button.strong:hover:not(.selected) {
+  .number-button.strong:hover:not() {
     background: linear-gradient(to bottom right, #fde68a, #fcd34d);
   }
   

@@ -71,26 +71,17 @@ const LotteryInterface: React.FC = () => {
       if(isStrong){
         newTables[tableIndex].strong=null
       }
-      else{
-        const index = (
-          newTables[tableIndex].regular.findIndex(n => n===number 
-          )
-        )
-        newTables[tableIndex].regular[index]=null
+    }
+
+    if (isStrong) {
+      newTables[tableIndex].strong = number;
+    } else {
+      const regularNumbers = newTables[tableIndex].regular;
+      const firstEmpty = regularNumbers.indexOf(null);
+      if (firstEmpty !== -1) {
+        regularNumbers[firstEmpty] = number;
       }
     }
-    else {
-      if (isStrong) {
-        newTables[tableIndex].strong = number;
-      } else {
-        const regularNumbers = newTables[tableIndex].regular;
-        const firstEmpty = regularNumbers.indexOf(null);
-        if (firstEmpty !== -1) {
-          regularNumbers[firstEmpty] = number;
-        }
-      }
-    }
-   
     setTables([...newTables]);
   };
 

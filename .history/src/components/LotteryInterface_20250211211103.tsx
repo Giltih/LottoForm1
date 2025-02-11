@@ -66,32 +66,21 @@ const LotteryInterface: React.FC = () => {
     number: number,
     isStrong: boolean = false
   ): void => {
-    const newTables = [...tables];
     if (isNumberSelected(tableIndex, number, isStrong)) {
-      if(isStrong){
-        newTables[tableIndex].strong=null
-      }
-      else{
-        const index = (
-          newTables[tableIndex].regular.findIndex(n => n===number 
-          )
-        )
-        newTables[tableIndex].regular[index]=null
+      return;
+    }
+
+    const newTables = [...tables];
+    if (isStrong) {
+      newTables[tableIndex].strong = number;
+    } else {
+      const regularNumbers = newTables[tableIndex].regular;
+      const firstEmpty = regularNumbers.indexOf(null);
+      if (firstEmpty !== -1) {
+        regularNumbers[firstEmpty] = number;
       }
     }
-    else {
-      if (isStrong) {
-        newTables[tableIndex].strong = number;
-      } else {
-        const regularNumbers = newTables[tableIndex].regular;
-        const firstEmpty = regularNumbers.indexOf(null);
-        if (firstEmpty !== -1) {
-          regularNumbers[firstEmpty] = number;
-        }
-      }
-    }
-   
-    setTables([...newTables]);
+    setTables([...newTables});
   };
 
   const clearTableRow = (tableIndex: number): void => {
@@ -100,7 +89,7 @@ const LotteryInterface: React.FC = () => {
       regular: Array(6).fill(null),
       strong: null,
     };
-    setTables([...newTables]);
+    setTables(newTables);
   };
 
   const LeftColumn: React.FC<ColumnProps> = () => (
@@ -220,6 +209,7 @@ const LotteryInterface: React.FC = () => {
                 key={num}
                 className={getNumberButtonClass(num)}
                 onClick={() => handleNumberSelection(selectedTable - 1, num)}
+                disabled={isNumberSelected(selectedTable - 1, num)}
               >
                 {num}
               </button>

@@ -89,6 +89,7 @@ const LotteryInterface: React.FC = () => {
           regularNumbers[firstEmpty] = number;
         }
       }
+
     }
    
     setTables([...newTables]);

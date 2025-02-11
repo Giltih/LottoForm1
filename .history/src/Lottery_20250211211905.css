@@ -248,7 +248,7 @@
     color: #1d4ed8;
   }
   
-  .number-button.regular:hover:not(.selected) {
+  .number-button.regular:hover:not(.) {
     background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
   }
   
@@ -257,7 +257,7 @@
     color: #b45309;
   }
   
-  .number-button.strong:hover:not(.selected) {
+  .number-button.strong:hover:not(:disabled) {
     background: linear-gradient(to bottom right, #fde68a, #fcd34d);
   }
   
