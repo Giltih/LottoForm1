@@ -42,6 +42,7 @@ const LotteryInterface: React.FC = () => {
   );
   const [selectedRaffles, setSelectedRaffles] = useState<number>(1);
   const [extraSelected, setExtraSelected]= useState<boolean>(false);
+  const [totalPrice, setTotalPrice]= useState<number>(0);
   const BASE_PRICE: number = 11.9;
   const EXTRA: number = 7.0;
  

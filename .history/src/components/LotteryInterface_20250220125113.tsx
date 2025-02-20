@@ -42,6 +42,7 @@ const LotteryInterface: React.FC = () => {
   );
   const [selectedRaffles, setSelectedRaffles] = useState<number>(1);
   const [extraSelected, setExtraSelected]= useState<boolean>(false);
+  const [totalPrice, setTotalPrice]= useState<number>(0);
   const BASE_PRICE: number = 11.9;
   const EXTRA: number = 7.0;
  
@@ -54,11 +55,6 @@ const LotteryInterface: React.FC = () => {
     return (BASE_PRICE * raffles + EXTRA * Number(extraSelected)).toFixed(2);
   };
   
-
-  const handleRaffleSelection = (count: number): void => {
-      setSelectedRaffles(count)
-  };
-
   const isNumberSelected = (
     tableIndex: number,
     number: number,
@@ -161,7 +157,7 @@ const LotteryInterface: React.FC = () => {
             </div>
             <div className="total-row">
               <span>Total:</span>
-              <span>₪{calculateTotalPrice(selectedRaffles)}</span>
+              <span>₪{calculateTotalPrice}</span>
             </div>
           </div>
           <button className="submit-button">Submit Form</button>

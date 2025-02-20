@@ -43,20 +43,13 @@ const LotteryInterface: React.FC = () => {
   const [selectedRaffles, setSelectedRaffles] = useState<number>(1);
   const [extraSelected, setExtraSelected]= useState<boolean>(false);
   const BASE_PRICE: number = 11.9;
-  const EXTRA: number = 7.0;
- 
- 
-  const onChange = () => {
-    setExtraSelected(!extraSelected)
-  }
 
   const calculateTotalPrice = (raffles: number): string => {
-    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected)).toFixed(2);
+    return (BASE_PRICE * raffles).toFixed(2);
   };
-  
 
   const handleRaffleSelection = (count: number): void => {
-      setSelectedRaffles(count)
+    setSelectedRaffles(count);
   };
 
   const isNumberSelected = (
@@ -146,7 +139,8 @@ const LotteryInterface: React.FC = () => {
         <div className="extra-option">
           <div className="extra-option-header">
           <label>
-        <input type="checkbox" checked={extraSelected} onChange={() => onChange()} />
+        <input type="checkbox" checked={extraSelected} onChange={(e) => onChange(e.target.checked)} />
+        תוספת EXTRA
       </label>
             <span>Extra Option</span>
             <HelpCircle className="help-icon" />
@@ -256,6 +250,7 @@ const LotteryInterface: React.FC = () => {
                   onClick={() =>
                     handleNumberSelection(selectedTable - 1, num, true)
                   }
+                  disabled={isNumberSelected(selectedTable - 1, num, true)}
                 >
                   {num}
                 </button>

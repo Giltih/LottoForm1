@@ -42,21 +42,20 @@ const LotteryInterface: React.FC = () => {
   );
   const [selectedRaffles, setSelectedRaffles] = useState<number>(1);
   const [extraSelected, setExtraSelected]= useState<boolean>(false);
+  const [totalPrice, setTotalPrice]= useState<number>(0);
   const BASE_PRICE: number = 11.9;
-  const EXTRA: number = 7.0;
- 
- 
-  const onChange = () => {
-    setExtraSelected(!extraSelected)
-  }
+  
+ const onChange = (checked:boolean) => {}
 
   const calculateTotalPrice = (raffles: number): string => {
-    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected)).toFixed(2);
+    return (BASE_PRICE * raffles).toFixed(2);
   };
   
+  const EXTRA: 
 
   const handleRaffleSelection = (count: number): void => {
-      setSelectedRaffles(count)
+      const calculatedPrice = BASE_PRICE * count;
+      setTotalPrice
   };
 
   const isNumberSelected = (
@@ -146,7 +145,7 @@ const LotteryInterface: React.FC = () => {
         <div className="extra-option">
           <div className="extra-option-header">
           <label>
-        <input type="checkbox" checked={extraSelected} onChange={() => onChange()} />
+        <input type="checkbox" checked={extraSelected} onChange={(e) => onChange(e.target.checked)} />
       </label>
             <span>Extra Option</span>
             <HelpCircle className="help-icon" />
@@ -161,7 +160,7 @@ const LotteryInterface: React.FC = () => {
             </div>
             <div className="total-row">
               <span>Total:</span>
-              <span>₪{calculateTotalPrice(selectedRaffles)}</span>
+              <span>₪{totalPrice}</span>
             </div>
           </div>
           <button className="submit-button">Submit Form</button>
