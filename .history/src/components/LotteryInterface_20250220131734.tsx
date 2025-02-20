@@ -188,7 +188,7 @@ const LotteryInterface: React.FC = () => {
               <span className="table-number">{tableIndex + 1}</span>
               <div className="number-grid">
                 {table.regular.map((num, i) => (
-                  <div key={i} className={getNumberClass('regular-number',num)}>
+                  <div key={i} className={getNumberClass('regular-number',)}>
                     {num}
                   </div>
                 ))}

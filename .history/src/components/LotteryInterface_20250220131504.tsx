@@ -119,9 +119,6 @@ const LotteryInterface: React.FC = () => {
     };
     setTables([...newTables]);
   };
-  
-  const getNumberClass = (s: string, val: number | null): string =>
-    val == null ? s : s + " highlighted";
 
   const LeftColumn: React.FC<ColumnProps> = () => (
     <Card className="left-column">
@@ -188,7 +185,7 @@ const LotteryInterface: React.FC = () => {
               <span className="table-number">{tableIndex + 1}</span>
               <div className="number-grid">
                 {table.regular.map((num, i) => (
-                  <div key={i} className={getNumberClass('regular-number',num)}>
+                  <div key={i} className="regular-number">
                     {num}
                   </div>
                 ))}
