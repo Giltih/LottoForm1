@@ -147,10 +147,8 @@ const LotteryInterface: React.FC = () => {
 
   const randomFillTable = ()=>{
     const newTables = [...tables];
-    newTables.forEach((table, index)=>{
-      randomFillTableRow(index);
-    });
-    setTables([...newTables]);
+    
+    
   };
 
   
@@ -209,7 +207,6 @@ const LotteryInterface: React.FC = () => {
 
   const MiddleColumn: React.FC<ColumnProps> = () => (
     <Card className="middle-column">
-      <button onClick={randomFillTable}>Fill Tables</button>
       <div className="table-list">
         {tables.map((table, tableIndex) => (
           <div

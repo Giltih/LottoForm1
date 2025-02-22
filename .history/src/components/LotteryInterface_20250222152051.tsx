@@ -139,20 +139,11 @@ const LotteryInterface: React.FC = () => {
     const newTables = [...tables];
     newTables[tableIndex] = {
       regular: randomFillUniqueArray(6,37),
-      strong: Math.floor(Math.random() * (8)) + 1,
+      strong: Math.floor(Math.random() * (8 ,1 1)) + 1,
     };
     setTables([...newTables])
     
   } 
-
-  const randomFillTable = ()=>{
-    const newTables = [...tables];
-    newTables.forEach((table, index)=>{
-      randomFillTableRow(index);
-    });
-    setTables([...newTables]);
-  };
-
   
   const getNumberClass = (s: string, val: number | null): string =>
     val == null ? s : s + " highlighted";
@@ -209,7 +200,6 @@ const LotteryInterface: React.FC = () => {
 
   const MiddleColumn: React.FC<ColumnProps> = () => (
     <Card className="middle-column">
-      <button onClick={randomFillTable}>Fill Tables</button>
       <div className="table-list">
         {tables.map((table, tableIndex) => (
           <div

@@ -120,39 +120,16 @@ const LotteryInterface: React.FC = () => {
     setTables([...newTables]);
   };
   
-  const randomFillUniqueArray = (size: number, range: number): number[] => {
-    if (size > range) {
-        throw new Error("Size cannot be greater than range");
-    }
-
-    let availableNumbers = Array.from({ length: range }, (_, i) => i + 1);
-    const arr: number[] = [];
-
-    for (let i = 0; i < size; i++) {
-        const randomIndex = Math.floor(Math.random() * availableNumbers.length);
-        arr.push(availableNumbers[randomIndex]);
-        availableNumbers.splice(randomIndex, 1); 
-    }
-  return arr
+  const randomFillUniqueArray = (size: number, range : number) {
+    const availableNumbers = Array.from({length:range},(_, i) => i + 1);
+    const arr = new Array(size);
+    arr.map((num : number, index : number)=>)
   }
-  const randomFillTableRow = (tableIndex: number)=>{
+
+  const randomFillTableRow = (tableIndex: number){
     const newTables = [...tables];
-    newTables[tableIndex] = {
-      regular: randomFillUniqueArray(6,37),
-      strong: Math.floor(Math.random() * (8)) + 1,
-    };
-    setTables([...newTables])
     
   } 
-
-  const randomFillTable = ()=>{
-    const newTables = [...tables];
-    newTables.forEach((table, index)=>{
-      randomFillTableRow(index);
-    });
-    setTables([...newTables]);
-  };
-
   
   const getNumberClass = (s: string, val: number | null): string =>
     val == null ? s : s + " highlighted";
@@ -209,7 +186,6 @@ const LotteryInterface: React.FC = () => {
 
   const MiddleColumn: React.FC<ColumnProps> = () => (
     <Card className="middle-column">
-      <button onClick={randomFillTable}>Fill Tables</button>
       <div className="table-list">
         {tables.map((table, tableIndex) => (
           <div
