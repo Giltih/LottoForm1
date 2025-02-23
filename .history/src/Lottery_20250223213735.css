@@ -316,11 +316,9 @@ color: #0055ff;
 .strong-number-section {
   margin-top: 2rem;
 }
-
 .strong-number-section .number-grid {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .lottery-interface {

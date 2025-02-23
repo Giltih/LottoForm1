@@ -146,11 +146,7 @@ const LotteryInterface: React.FC = () => {
   };
 
   const clearTables = () => {
-    const newTables = tables.map(() => ({
-      regular : Array(6).fill(null),
-      strong : null,
-    }) )
-    setTables([...newTables]);
+   const newTables = 
   }
  
   const navTableSelection = (b: boolean) => {
@@ -223,10 +219,7 @@ const LotteryInterface: React.FC = () => {
 
   const MiddleColumn: React.FC<ColumnProps> = () => (
     <Card className="middle-column">
-      <div className="middle-header">
-        <Trash2 id="clear-tables-btn" className="delete-icon" onClick={clearTables} ></Trash2>
-        <button id="auto-fill-btn" onClick={randomFillTables}>Fill Tables</button>
-      </div>
+      <button onClick={randomFillTables}>Fill Tables</button>
       <div className="table-list">
         {tables.map((table, tableIndex) => (
           <div

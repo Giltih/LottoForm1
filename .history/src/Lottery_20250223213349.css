@@ -129,8 +129,7 @@ width: 2rem;
 margin: 0 10px;
 padding: 0.4rem; 
 font-size: 1.2rem;
-background-color: initial; 
-color: #0055ff;
+ background-color: initial; color: #0055ff;
 }
 
 .table-list {
@@ -315,10 +314,6 @@ color: #0055ff;
 
 .strong-number-section {
   margin-top: 2rem;
-}
-
-.strong-number-section .number-grid {
-  margin-top: 1rem;
 }
 
 /* Responsive Styles */

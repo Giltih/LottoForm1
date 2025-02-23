@@ -225,7 +225,7 @@ const LotteryInterface: React.FC = () => {
     <Card className="middle-column">
       <div className="middle-header">
         <Trash2 id="clear-tables-btn" className="delete-icon" onClick={clearTables} ></Trash2>
-        <button id="auto-fill-btn" onClick={randomFillTables}>Fill Tables</button>
+        <button id="clea" onClick={randomFillTables}>Fill Tables</button>
       </div>
       <div className="table-list">
         {tables.map((table, tableIndex) => (
