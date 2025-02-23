@@ -145,7 +145,7 @@ const LotteryInterface: React.FC = () => {
     
   } 
 
-  const randomFillTable = ()=>{
+  const randmFillTable = ()=>{
     const newTables = [...tables];
     newTables.forEach((table, index)=>{
       randomFillTableRow(index);

@@ -46,7 +46,7 @@ const LotteryInterface: React.FC = () => {
   const EXTRA: number = 7.0;
  
  
-  const onChange = () => {
+  const onCange = () => {
     setExtraSelected(!extraSelected)
   }
 

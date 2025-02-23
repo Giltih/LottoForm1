@@ -231,12 +231,10 @@
 }
 
 .nav-button {
- background-color: transparent;
+ background-color: blue;
  height: fit-content;
  padding: 0.2rem;
-}
-.nav-button:hover {
-  background-color: #acc5ee;
+ 
 }
 
 .nav-icon {

@@ -164,7 +164,7 @@ const LotteryInterface: React.FC = () => {
 
     }
     else {
-      setSelectedTable(newIndex);
+      setSelectedTable
     }
   }
   
@@ -281,10 +281,10 @@ const LotteryInterface: React.FC = () => {
           <div className="section-header">
             <span className="section-title">בחר שישה (1-37)</span>
             <div className="navigation-buttons">
-           <button className="nav-button" onClick={() => navTableSelection(false)}> 
+           <button className="nav-button" onClick={}> 
               <ChevronLeft className="nav-icon" />
           </button>
-           <button className="nav-button" onClick={() => navTableSelection(true)}>
+           <button className="nav-button" onClick={}>
               <ChevronRight className="nav-icon" />
            </button>
           </div>

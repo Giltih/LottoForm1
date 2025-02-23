@@ -281,7 +281,7 @@ const LotteryInterface: React.FC = () => {
           <div className="section-header">
             <span className="section-title">בחר שישה (1-37)</span>
             <div className="navigation-buttons">
-           <button className="nav-button" onClick={() => navTableSelection(false)}> 
+           <button className="nav-button" onClick={() navTableSelection.bind(false)}> 
               <ChevronLeft className="nav-icon" />
           </button>
            <button className="nav-button" onClick={() => navTableSelection(true)}>

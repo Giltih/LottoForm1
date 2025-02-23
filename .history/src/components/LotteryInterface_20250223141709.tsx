@@ -152,21 +152,7 @@ const LotteryInterface: React.FC = () => {
     });
     setTables([...newTables]);
   };
- 
-  const navTableSelection = (b: boolean) => {
-    const moveIndex = b ? 1 : -1;
-    const newIndex = selectedTable + moveIndex;
-    if (newIndex < 1){
-      setSelectedTable(tables.length);
-    }
-    else if (newIndex > tables.length){
-      setSelectedTable(1);
 
-    }
-    else {
-      setSelectedTable(newIndex);
-    }
-  }
   
   const getNumberClass = (s: string, val: number | null): string =>
     val == null ? s : s + " highlighted";
@@ -281,10 +267,10 @@ const LotteryInterface: React.FC = () => {
           <div className="section-header">
             <span className="section-title">בחר שישה (1-37)</span>
             <div className="navigation-buttons">
-           <button className="nav-button" onClick={() => navTableSelection(false)}> 
+           <button> 
               <ChevronLeft className="nav-icon" />
           </button>
-           <button className="nav-button" onClick={() => navTableSelection(true)}>
+           <button>
               <ChevronRight className="nav-icon" />
            </button>
           </div>

@@ -225,19 +225,9 @@
 
 .navigation-buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
 }
-
-.nav-button {
- background-color: transparent;
- height: fit-content;
- padding: 0.2rem;
-}
-.nav-button:hover {
-  background-color: #acc5ee;
-}
+.nav
 
 .nav-icon {
   width: 1.25rem;
