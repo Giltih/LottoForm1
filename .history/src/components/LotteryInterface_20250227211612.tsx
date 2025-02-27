@@ -53,7 +53,7 @@ const LotteryInterface: React.FC = () => {
   }
 
   const calculateTotalPrice = (raffles: number): string => {
-    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected) + calculateFilledTables()).toFixed(2);
+    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected)).toFixed(2);
   };
   
 
@@ -181,8 +181,7 @@ const LotteryInterface: React.FC = () => {
   }
 
   const calculateFilledTables = () => {
-    const filledTablesNumber = Math.max(0, countFilledTables() - 1);
-    return filledTablesNumber * 10;
+    const filledTablesNumber = 
   }
   
   const getNumberClass = (s: string, val: number | null): string =>

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Trash2, HelpCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card } from "./ui/Card";
 import "../Lottery.css";
-import { table } from "console";
-import StrongNumberSelector from "./StrongNumberSelector";
 
 
 interface TableData {
@@ -53,7 +51,7 @@ const LotteryInterface: React.FC = () => {
   }
 
   const calculateTotalPrice = (raffles: number): string => {
-    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected) + calculateFilledTables()).toFixed(2);
+    return (BASE_PRICE * raffles + EXTRA * Number(extraSelected)).toFixed(2);
   };
   
 
@@ -168,21 +166,6 @@ const LotteryInterface: React.FC = () => {
     else {
       setSelectedTable(newIndex);
     }
-  }
-
-  const countFilledTables = () => {
-    let count = 0;
-    tables.forEach(table => {
-      if(table.regular.some(item => item !== null) || table.strong !== null){
-        count += 1;
-      }
-    });
-    return count;
-  }
-
-  const calculateFilledTables = () => {
-    const filledTablesNumber = Math.max(0, countFilledTables() - 1);
-    return filledTablesNumber * 10;
   }
   
   const getNumberClass = (s: string, val: number | null): string =>
@@ -304,7 +287,7 @@ const LotteryInterface: React.FC = () => {
            <button className="nav-button" onClick={() => navTableSelection(false)}> 
               <ChevronLeft className="nav-icon" />
           </button>
-          <label>{"טבלה " + selectedTable}</label>
+          <label>{"טבלה" ת}</label>
            <button className="nav-button" onClick={() => navTableSelection(true)}>
               <ChevronRight className="nav-icon" />
            </button>

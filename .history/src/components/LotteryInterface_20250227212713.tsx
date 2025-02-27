@@ -181,7 +181,7 @@ const LotteryInterface: React.FC = () => {
   }
 
   const calculateFilledTables = () => {
-    const filledTablesNumber = Math.max(0, countFilledTables() - 1);
+    const filledTablesNumber =Math.max(0, countFilledTables() - 1);
     return filledTablesNumber * 10;
   }
   
