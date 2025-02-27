@@ -4,6 +4,7 @@ import { Card } from "./ui/Card";
 import "../Lottery.css";
 
 
+
 interface TableData {
   regular: (number | null)[];
   strong: number | null;
